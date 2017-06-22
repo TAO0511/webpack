@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>webpack tmpl</title>
+	<link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css%>">
+</head>
+<body>
+	<div id="root"></div>	
+	<p class="bule">这是蓝色的</p>
+	<% for(key in htmlWebpackPlugin.files) { %>
+		<%=key%>:<%=htmlWebpackPlugin.files[key]%>
+	<% } %>
+	<script src="<%=htmlWebpackPlugin.files.js%>"></script>
+</body>
+</html>
